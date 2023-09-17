@@ -1,0 +1,27 @@
+.card {
+  display: flex !important;
+  flex-direction: column;
+  padding: 0;
+}
+
+.card > .card-content {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px dotted #d9d9d9;
+  height: 100%;
+  margin: 0 8px;
+  padding: 16px 8px 8px;
+}
+
+.card .card-footer {
+  border-top: 1px dotted #d9d9d9;
+  font-size: 14px;
+  margin: auto 8px;
+  padding: 16px 8px;
+}
+
+.card-header {
+  border-radius: 2px;
+  border-top: 3.5px solid #a87ca0;
+  padding: 10px 16px;
+}

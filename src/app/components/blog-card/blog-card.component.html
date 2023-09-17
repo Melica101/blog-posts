@@ -1,0 +1,24 @@
+<div class="p-strip row">
+  <div class="col-4 col-medium-2 card p-card--highlighted" *ngFor="let post of posts">
+    <header class="card-header">
+      <h5 class="p-text--small-caps u-no-margin--bottom u-no-padding--top">
+        {{post._embedded["wp:term"][2][0] ? post._embedded["wp:term"][2][0].name : "Canonical Announcements"}}</h5>
+    </header>
+    <div class="card-content">
+      <a href="{{post.link}}">
+        <img alt="" height="311" width="555" src="{{post.featured_media}}">
+      </a>
+      <h3 class="p-heading--4">
+        <a href="{{post.link}}">{{post.title.rendered}}</a>
+      </h3>
+      <p>
+        <em>by
+          <a href="{{post._embedded.author[0].link}}">{{post._embedded.author[0].name}}</a>
+          on {{changeDate(post.date)}}</em>
+      </p>
+    </div>
+    <p class="card-footer">
+      Article
+    </p>
+  </div>
+</div>
