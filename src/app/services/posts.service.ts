@@ -10,7 +10,7 @@ export class PostsService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getPosts(){
+  getPosts() {
     return this.httpClient.get(this.url);
   }
 
