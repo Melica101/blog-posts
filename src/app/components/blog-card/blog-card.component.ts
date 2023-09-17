@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import * as moment from 'moment';
 
 @Component({
   selector: 'app-blog-card',
@@ -14,9 +13,4 @@ export class BlogCardComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  changeDate(date: Date){
-    return moment(date).format('DD MMMM YYYY');
-  }
-
 }

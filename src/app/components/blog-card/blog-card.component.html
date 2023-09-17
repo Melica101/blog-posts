@@ -6,15 +6,14 @@
     </header>
     <div class="card-content">
       <a href="{{post.link}}">
-        <img alt="" height="311" width="555" src="{{post.featured_media}}">
+        <img alt="blog-featured-media" height="311" width="555" src="{{post.featured_media}}">
       </a>
       <h3 class="p-heading--4">
         <a href="{{post.link}}">{{post.title.rendered}}</a>
       </h3>
       <p>
-        <em>by
-          <a href="{{post._embedded.author[0].link}}">{{post._embedded.author[0].name}}</a>
-          on {{changeDate(post.date)}}</em>
+        <em>by <a href="{{post._embedded.author[0].link}}">{{post._embedded.author[0].name}}</a>
+          on {{post.date | date: 'd MMMM  y'}}</em>
       </p>
     </div>
     <p class="card-footer">
